@@ -26,3 +26,17 @@ db.create_all() # 10. With db.create_all, create tables in our db for all the mo
 # ```
 # psql model_query
 # ```
+
+# 13. Verify that the `users` table exists
+# ```
+# \dt # shows the `users` table is there
+# ```
+# PRACTICALLY:
+# model_query=# \dt
+#        List of relations
+#  Schema | Name  | Type  | Owner 
+# --------+-------+-------+-------
+#  public | users | table | pc
+# (1 row)
+
+# model_query=# 
