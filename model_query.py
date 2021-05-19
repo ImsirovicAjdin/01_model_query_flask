@@ -40,3 +40,19 @@ db.create_all() # 10. With db.create_all, create tables in our db for all the mo
 # (1 row)
 
 # model_query=# 
+
+# 14. Verify the structure of the `users` table
+# ```
+# \d users # shows the structure of the `users` table
+# ```
+# PRACTICALLY
+# model_query=# \d users
+#                                  Table "public.users"
+#  Column |       Type        | Collation | Nullable |              Default              
+# --------+-------------------+-----------+----------+-----------------------------------
+#  id     | integer           |           | not null | nextval('users_id_seq'::regclass)
+#  name   | character varying |           | not null | 
+# Indexes:
+#     "users_pkey" PRIMARY KEY, btree (id)
+
+# model_query=# 
