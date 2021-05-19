@@ -56,3 +56,23 @@ db.create_all() # 10. With db.create_all, create tables in our db for all the mo
 #     "users_pkey" PRIMARY KEY, btree (id)
 
 # model_query=# 
+
+# 15. Insert some name into the `users` tbale
+# ```
+# INSERT INTO users (name) VALUES (`Albert Einstein`);
+# ```
+# PRACTICALLY:
+# pc@pc:~/001-FSWD-UND-NEW/02_model_query$ psql model_query 
+# psql (12.6 (Ubuntu 12.6-0ubuntu0.20.04.1))
+# Type "help" for help.
+
+# model_query=# INSERT INTO users (name) VALUES ('Albert Einstein');
+# INSERT 0 1
+# VERIFICATION:
+# model_query=# select * from users;
+#  id |      name       
+# ----+-----------------
+#   1 | Albert Einstein
+# (1 row)
+
+# model_query=# 
