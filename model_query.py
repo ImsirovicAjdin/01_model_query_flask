@@ -19,3 +19,5 @@ def index(): # 04. Define the index method...
     return "Hello model query!" # 04. ... and return a string from it
 
 db.create_all() # 10. With db.create_all, create tables in our db for all the models that we have decalres using db.Model previously
+
+# 11. Run the app with FLASK_APP=model_query.py FLASK_DEBUG=true flask run (open on localhost:5000)
