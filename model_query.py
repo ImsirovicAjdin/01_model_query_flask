@@ -17,3 +17,5 @@ class User(db.Model):
 @app.route('/') # 03. With at app decorator, listen to root route
 def index(): # 04. Define the index method...
     return "Hello model query!" # 04. ... and return a string from it
+
+db.create_all() # 10. With db.create_all, create tables in our db for all the models that we have decalres using db.Model previously
