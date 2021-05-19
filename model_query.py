@@ -2,3 +2,5 @@
 # mkdir model_query && cd model_query && touch model_query.py && code .
 
 from flask import Flask
+
+app = Flask(__name__)
