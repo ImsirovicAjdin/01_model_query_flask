@@ -8,6 +8,12 @@ app = Flask(__name__) # 02. Instantiate the app
 db = SQLAlchemy(app) # 06. Instantiate the db and pass in this flask app
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///model_query' # 08. Connect to the db from our Flask app (by setting a configuration variable)
 
+# 09. Add a User class that inherits from db.Model
+class User(db.Model):
+    __tablename__ = 'users'
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(), nullable=False)
+
 @app.route('/') # 03. With at app decorator, listen to root route
 def index(): # 04. Define the index method...
     return "Hello model query!" # 04. ... and return a string from it
